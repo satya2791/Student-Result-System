@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Result System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-card">
+
+  <div class="app-header">
+    <h1>Don't know how to calculate your results?<br>Let's remove the confusion.</h1>
+  </div>
+
+  <div class="app-body">
+
+    <!-- PAGE 1: Student details -->
+    <section id="page1" class="page active">
+      <div class="form-group">
+        <label for="studentName">Name of Student:</label>
+        <input type="text" id="studentName" placeholder="">
+      </div>
+      <div id="nameError" class="error-text"></div>
+
+      <div class="form-group">
+        <label for="subjectCount">Number of Subjects:</label>
+        <input type="number" id="subjectCount" min="1" max="20" placeholder="">
+      </div>
+      <div id="subjectCountError" class="error-text"></div>
+
+      <div class="form-group">
+        <label for="totalMarks">Total Marks:</label>
+        <input type="number" id="totalMarks" min="1" placeholder="">
+      </div>
+      <div id="totalMarksError" class="error-text"></div>
+
+      <button type="button" class="btn-submit" id="page1Submit">Submit</button>
+    </section>
+
+    <!-- PAGE 2: Marks per subject (built dynamically) -->
+    <section id="page2" class="page">
+      <div id="subjectFields"></div>
+      <div id="subjectError" class="error-text"></div>
+      <button type="button" class="btn-submit" id="page2Submit">Submit</button>
+    </section>
+
+    <!-- PAGE 3: Results -->
+    <section id="page3" class="page">
+      <div class="result-line">Marks: <span class="value" id="resultMarks"></span></div>
+      <div class="result-line">Percentage: <span class="value" id="resultPercentage"></span></div>
+      <div class="result-line grade">Grade: <span class="value" id="resultGrade"></span></div>
+      <button type="button" class="btn-submit" id="restartBtn">Start Over</button>
+    </section>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

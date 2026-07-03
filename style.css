@@ -1,0 +1,156 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8e8e8;
+  padding: 20px;
+}
+
+.app-card {
+  width: 100%;
+  max-width: 420px;
+  border: 3px solid #2d6cdf;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #eafaf1;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-header {
+  position: relative;
+  background-image: url('Background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 26px 18px;
+  text-align: center;
+}
+
+.app-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 60, 0.45);
+}
+
+.app-header h1 {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.app-body {
+  padding: 28px 24px 32px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.95rem;
+  color: #222;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #2d6cdf;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  outline: none;
+  background: #ffffff;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  border-color: #1e4fb8;
+  box-shadow: 0 0 0 3px rgba(45, 108, 223, 0.2);
+}
+
+.btn-submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #27ae60;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-submit:hover {
+  background: #219150;
+}
+
+.btn-submit:active {
+  transform: scale(0.98);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+.error-text {
+  color: #d94141;
+  font-size: 0.85rem;
+  margin-top: -12px;
+  margin-bottom: 16px;
+  min-height: 16px;
+}
+
+.result-line {
+  font-size: 1.05rem;
+  color: #222;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(45, 108, 223, 0.25);
+}
+
+.result-line span.value {
+  font-weight: 700;
+  color: #1e4fb8;
+}
+
+.result-line.grade span.value {
+  color: #27ae60;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .app-header h1 {
+    font-size: 0.92rem;
+  }
+
+  .app-body {
+    padding: 22px 18px 26px;
+  }
+}
+
+@media (min-width: 900px) {
+  .app-card {
+    max-width: 460px;
+  }
+}
